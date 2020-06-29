@@ -1,0 +1,115 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lista de Tarefas</title>
+  </head>
+  <body>
+    <h1 class="mb-4">Lista de Tarefas</h1>
+
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <form id="add-task-form">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Adicionar tarefa"
+              name="add-task-name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input
+                type="radio"
+                id="add-task-college"
+                name="add-task-category"
+                class="custom-control-input"
+                required
+              />
+              <label class="custom-control-label" for="add-task-college"
+                >Faculdade</label
+              >
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input
+                type="radio"
+                id="add-task-routine"
+                name="add-task-category"
+                class="custom-control-input"
+                required
+              />
+              <label class="custom-control-label" for="add-task-routine"
+                >Dia a dia</label
+              >
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success">Adicionar</button>
+        </form>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <form id="rmv-task-form">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Remover tarefa"
+              name="rmv-task-name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input
+                type="radio"
+                id="rmv-task-college"
+                name="rmv-task-category"
+                class="custom-control-input"
+                required
+              />
+              <label class="custom-control-label" for="rmv-task-college"
+                >Faculdade</label
+              >
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input
+                type="radio"
+                id="rmv-task-routine"
+                name="rmv-task-category"
+                class="custom-control-input"
+                required
+              />
+              <label class="custom-control-label" for="rmv-task-routine"
+                >Dia a dia</label
+              >
+            </div>
+          </div>
+          <button type="submit" class="btn btn-danger">Remover</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-12 col-md-6">
+        <h2>Faculdade</h2>
+        <ul id="college-list"></ul>
+        <p id="college-list-empty">Sem tarefas</p>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <h2>Dia a dia</h2>
+        <ul id="routine-list"></ul>
+        <p id="routine-list-empty">Sem tarefas</p>
+      </div>
+    </div>
+  </body>
+</html>
